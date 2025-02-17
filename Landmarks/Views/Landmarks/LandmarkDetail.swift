@@ -25,8 +25,7 @@ struct LandmarkDetail: View {
                 .frame(height: 300)
             
             CircleImage(image: landmark.image)
-                .offset(y: -130)
-                .padding(.bottom, -130)
+                .padding(.top, -130)
             
             VStack(alignment: .leading) {
                 
