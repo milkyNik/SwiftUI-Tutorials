@@ -7,8 +7,7 @@
 
 import Foundation
 
-@Observable
-class ModelData {
+@Observable class ModelData {
     var landmarks: [Landmark] = load("landmarkData.json")
 }
 
