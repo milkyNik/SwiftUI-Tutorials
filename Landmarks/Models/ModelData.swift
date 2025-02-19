@@ -12,10 +12,14 @@ import Foundation
     var hikes: [Hike] = load("hikeData.json")
     
     var categories: [String: [Landmark]] {
-        Dictionary(
+        return Dictionary(
             grouping: landmarks,
             by: { $0.category.rawValue }
         )
+    }
+    
+    var features: [Landmark] {
+        return landmarks.filter { $0.isFeatured }
     }
 }
 
