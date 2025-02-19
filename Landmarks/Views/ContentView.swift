@@ -14,7 +14,6 @@ struct ContentView: View {
     enum Tab {
         case featured
         case list
-        case test
     }
     
     var body: some View {
@@ -30,14 +29,7 @@ struct ContentView: View {
                     Label("List", systemImage: "list.bullet")
                 })
                 .tag(Tab.list)
-            PageView(pages: ModelData().features.map { FeatureCard(landmark: $0) })
-                .tabItem {
-                    Label("Test", systemImage: "star")
-                }
-                .tag(Tab.test)
         }
-        
-        
     }
 }
 
